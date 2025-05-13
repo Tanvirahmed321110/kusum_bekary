@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="./static/css/common.css">
+    </head>
+
+    <body>
+
+        <!--===================================-->
+        <!--======   Header Start Here   ======-->
+        <!--===================================-->
+        <header>
+            <div class="header-wrapper my-flex-between my-h-100">
+                <div class="my-d-flex my-gap-10 my-flex-between left">
+                    <!--=====  For Logo  =====-->
+                    <div class="logo  ">
+                        <h2 class="">Kusum .</h1>
+                    </div>
+
+                    <!-- Sidebar Close Button -->
+                    <button class="sidebar-close-btn my-d-md-none" id="sidebar-btn"><i
+                            class="ri-menu-line"></i></button>
+                </div>
+
+
+                <div class="my-flex-between my-w-100">
+                    <!-- page name -->
+                    <h3 class="my-ml-5 page-name my-fw-medium ">Dashboard</h3>
+
+                    <!-- header right -->
+                    <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
+
+
+                        <!--=====  For Profile  =====-->
+                        <div class="profile click-dropdown-parent">
+                            <img class="my-profile-md dropdown-btn"
+                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                alt="">
+
+                            <!-- Profile  Dropdown -->
+                            <div class="click-dropdown lg">
+                                <ul class="my-has-scrollbar-sm">
+                                    <li class="my-p-4">
+                                        <div class="my-d-flex my-align-center my-gap-4">
+                                            <img class="my-icon-md profile-dropdown-img"
+                                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                                alt="">
+                                            <div>
+                                                <h4>Md Tanvir Ahmed</h4>
+                                                <div class="my-mt-1">tanvir@gmail.com</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-edit-line"></i></span>
+                                        <div class="my-fs-lg"> Edit Profile</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-settings-4-line"></i></span>
+                                        <div class="my-fs-lg"> Setting</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-logout-box-r-line"></i></span>
+                                        <div class="my-fs-lg">Log Out</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--===== For MObile =====-->
+                    <div class="my-d-none mobile-header my-text-right">
+                        <!-- menu button -->
+                        <button class="menu-icon my-fs-xxl mobile-menu-btn" id="mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+
+
+
+                    <!--===== For MObile Header Bottom =====-->
+                    <div class="mobile-header-bottom my-d-none my-px-5">
+
+                        <div class=" my-flex-center my-gap-5 ">
+                            <h4 class="my-text-white"> Sales Page</h4>
+                        </div>
+
+                        <!--=====  For Mobile Profile  =====-->
+                        <div class="profile click-dropdown-parent">
+                            <img class="my-profile-md dropdown-btn"
+                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                alt="">
+
+                            <!-- Profile  Dropdown -->
+                            <div class="click-dropdown mobile lg">
+                                <ul class="my-has-scrollbar-sm">
+                                    <li class="my-p-4">
+                                        <div class="my-d-flex my-align-center my-gap-4">
+                                            <img class="my-icon-md profile-dropdown-img"
+                                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                                alt="">
+                                            <div>
+                                                <h4>Md Tanvir Ahmed</h4>
+                                                <div class="my-mt-1">tanvir@gmail.com</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-edit-line"></i></span>
+                                        <div class="my-fs-lg"> Edit Profile</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-settings-4-line"></i></span>
+                                        <div class="my-fs-lg"> Setting</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-logout-box-r-line"></i></span>
+                                        <div class="my-fs-lg">Log Out</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=================================-->
+        <!--======   Header End Here   ======-->
+        <!--=================================-->
+
+
+
+        <!--====================================-->
+        <!--======   Sidebar Start Here   ======-->
+        <!--====================================-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-wrapper my-flex-between my-flex-column my-h-100">
+
+
+
+                <!--==============   Sidebar Main Menu Here  ================ -->
+                <ul class="sidebar-menu my-w-100 my-has-scrollbar-sm">
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between  " href="./index.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <img class="w-10" src="./static/images/dashboard.png" alt="">
+                                ড্যাশবোর্ড
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between active " href="./index.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <img class="w-10" src="./static/images/store.png" alt="">
+                                দোকান
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between  " href="./index.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <img class="w-10" src="./static/images/reports.png" alt="">
+                                হিস্ট্রি
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!--==============   Sidebar Main Menu Bottom  ================ -->
+                <div class="my-w-100 sidebar-bottom">
+                    <div class="my-border-bottom my-p-2  my-fs-sm  my-text-white">Others</div>
+                    <ul class="my-mt-1 my-mt-0">
+                        <li class="sidebar-main-menu my-d-flex my-gap-2"><i class="ri-settings-3-line"></i>
+                            Setting</li>
+                        <li class="sidebar-main-menu my-d-flex my-gap-2"><i class="ri-customer-service-fill"></i>
+                            Help Center</li>
+                        <li class="sidebar-main-menu my-d-flex my-gap-2"><i class="ri-logout-box-r-line"></i>
+                            Log Out</li>
+                        <li class="my-flex-center">
+                            <a href="#" class="my-fs-xs my-p-1 my-text-red my-d-flex my-align-center my-gap-1">
+                                <span>⚡</span>
+                                power
+                                by
+                                xsellece</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--=========================================-->
+        <!--======   Main Content Start Here   ======-->
+        <!--=========================================-->
+        <section>
+            <div class="main-contents my-p-6 sale-page my-has-scrollbar-sm" id="main-contents">
+
+                <div class="my-grid-2 my-grid-md-1 my-gap-10 my-gap-md-2">
+                    <!--======  For Search  ======-->
+                    <div>
+                        <div class="input-and-button">
+                            <input type="text" placeholder="SEARCH HERE...">
+                            <button class="my-btn my-primary-btn search-btn">Search</button>
+                        </div>
+                        <h4 class="my-mt-2 my-d-md-none">Products</h4>
+                    </div>
+
+                    <!--======  For Category  ======-->
+                    <div class="category">
+                        <h3>Category</h3>
+                        <div class="my-d-flex flex-wrap tab-buttons my-gap-2 my-mt-1">
+                            <div class="tab-button active">পাউরুটি</div>
+                            <div class="tab-button">কেক ও কাপকেক</div>
+                            <div class="tab-button">পেস্ট্রি</div>
+                            <div class="tab-button">বিস্কুট</div>
+                            <div class="tab-button">বিশেষ আইটেম</div>
+                            <div class="tab-button">চকলেট মাফিন</div>
+                            <div class="tab-button">কুকি</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--===============   Products   ==================-->
+                <div class="my-grid-4 my-grid-lg-3 my-gap-4 my-gap-lg-2 products my-grid-md-2 my-grid-sm-2 my-mt-7">
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-1">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5 class="my-fs-md">Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>12</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-1">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5 class="my-fs-md">Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>12</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-1">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5>Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>22</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=====  single Products =====-->
+                    <div class="my-card product my-grid-2 my-gap-2">
+                        <div>
+                            <img src="https://assets.telegraphindia.com/abp/2022/Jul/1658758285_new-project-2022-07-25t194029-036.jpg"
+                                alt="">
+                        </div>
+
+                        <!-- details -->
+                        <div class="my-flex-column my-justify-between">
+                            <h5 class="my-fs-md">Products Name Here</h5>
+                            <div>
+                                <div><span class="my-fw-medium">Quantity:</span> <span>12</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=======================================-->
+        <!--======   Main Content End Here   ======-->
+        <!--=======================================-->
+
+
+
+
+        <!--==================================-->
+        <!--======   Modal Start Here   ======-->
+        <!--==================================-->
+        <div class="my-modal " id="new-modal">
+            <div class="modal-content ">
+                <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
+                <div class="">
+                    <div class="header">
+                        hader here
+                    </div>
+
+                    <div class="modal-body my-p-5">body</div>
+
+                    <div class="footer">Footer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- overlay -->
+        <div class="modal-overlay"></div>
+
+
+
+
+
+        <script src="./static/js/main.js"></script>
+        <script src="./static/js/index.js"></script>
+    </body>
+
+</html>

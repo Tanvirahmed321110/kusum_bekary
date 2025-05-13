@@ -1,0 +1,1 @@
+openModalF('create-product-modal', '.create-product-btn')

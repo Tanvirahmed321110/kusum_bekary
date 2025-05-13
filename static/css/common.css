@@ -1,0 +1,587 @@
+@import url('./variable.css');
+@import url('./component.css');
+@import url('./custom_class.css');
+
+
+/*
+===============================
+=====  Header Start Here  =====
+===============================
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    height: 64px;
+    box-shadow: var(--shadow-1);
+    padding: 8px 16px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    /* border-bottom: 2px solid #06243a; */
+}
+
+header .left {
+    width: 354px;
+}
+
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    border-color: #e9e5e1;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+
+
+/* Sliding background */
+.active-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    /* since we have 2 buttons */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+
+
+
+/* Profile dropdown */
+.profile-dropdown-img {
+    padding: 3px;
+    border: 2px solid var(--border-color);
+}
+
+
+.profile .click-dropdown .item {
+    padding: 12px 16px;
+}
+
+img {
+    background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+/*
+================================
+=====  Sidebar Start Here  =====
+================================
+*/
+.sidebar {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 300px;
+    min-height: calc(100dvh - 64px);
+    background-color: var(--white);
+    z-index: 10;
+    box-shadow: var(--shadow-2);
+    transition: transform .4s linear;
+    background-color: var(--sidebar-header-bg);
+    background-color: var(--white);
+}
+
+.sidebar.close {
+    transform: translateX(-290px);
+}
+
+/*=====  sidebar-close-btn  =====*/
+.sidebar-close-btn {
+    width: 44px;
+    height: 42px;
+    box-shadow: var(--shadow-3);
+    border: 3px solid var(--gray);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+.sidebar-close-btn i {
+    /* animation: alltime 1s linear infinite; */
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s ease-in;
+    color: var(--gray);
+}
+
+.sidebar-close-btn:hover {
+    border-color: #0b4269;
+}
+
+@keyframes alltime {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 6deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+
+
+/*=====  sidebar menu  =====*/
+.sidebar-menu {
+    /* padding-top: 6px; */
+    height: calc(100dvh - 260px);
+    overflow-y: auto;
+}
+
+.sidebar-menu.my-has-scrollbar {
+    overflow: hidden;
+    scrollbar-width: thin;
+}
+
+/* Show scrollbar only on hover */
+.sidebar-menu.my-has-scrollbar:hover {
+    overflow: auto;
+}
+
+/* Chrome, Edge, Safari */
+.sidebar-menu.my-has-scrollbar-sm::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+    background-color: transparent;
+}
+
+.sidebar-menu.my-has-scrollbar-sm:hover::-webkit-scrollbar {
+    background-color: var(--red);
+    background-color: #18527c;
+    width: 8px;
+    border: 1px solid transparent;
+}
+
+.sidebar-menu.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
+    background-color: #1f91e2;
+}
+
+.sidebar a:active {
+    transform: translateY(2px);
+}
+
+
+
+
+
+/*=====  Sidebar main menu  =====*/
+.sidebar-main-menu {
+    padding: 10px 16px;
+    font-size: var(--fs-md);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    color: var(--dark);
+}
+
+
+.sidebar-main-menu:hover,
+.sidebar-main-menu.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    /* background-color: var(--primary-hover-color); */
+}
+
+
+.sidebar-main-menu img {
+    width: 28px;
+    padding: 3px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 2px;
+}
+
+.sidebar-main-menu:hover i {
+    color: var(--white);
+}
+
+.sidebar-main-menu i {
+    transition: transform 0.4s ease-in-out;
+    font-size: var(--fs-lg);
+    color: var(--text-color);
+}
+
+.sidebar-main-menu i.active {
+    transform: rotate(90deg);
+}
+
+/*====  sidebar bottom  =====*/
+.sidebar-bottom .sidebar-main-menu i {
+    font-size: var(--fs-xl);
+}
+
+.sidebar-bottom .sidebar-main-menu {
+    gap: 10px
+}
+
+
+/*=====  sidebar dropdown menu  =====*/
+.sidebar-dropdown-menu {
+    /* background-color: var(--gray); */
+    margin-left: 16px;
+    max-height: 0px;
+    visibility: hidden;
+    transition: max-height .8s linear, visibility .8s linear, opacity .8s linear;
+    border-left: 1px solid var(--orange);
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+
+.sidebar-dropdown-menu.active {
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.sidebar-dropdown-menu i {
+    font-size: var(--fs-sm);
+}
+
+.sidebar-dropdown-menu .dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    color: var(--border-color);
+    font-weight: 400;
+    padding-left: 36px;
+    position: relative;
+}
+
+.sidebar-dropdown-menu .dropdown-item::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--orange);
+}
+
+.sidebar-dropdown-menu .dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 12px;
+    height: 1px;
+    background-color: var(--orange);
+}
+
+.sidebar-dropdown-menu .dropdown-item:hover,
+.sidebar-dropdown-menu .dropdown-item.active {
+    background-color: var(--white-off);
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+======================================
+=====  Main Contents Start Here  =====
+======================================
+*/
+.main-contents {
+    margin-left: 300px;
+    margin-top: 64px;
+    height: calc(100dvh - 64px);
+    overflow-y: auto;
+    transition: margin-left .4s linear;
+    padding-bottom: 24px;
+}
+
+.main-contents.active {
+    margin-left: 10px;
+}
+
+
+
+
+.main-contents .my-card {
+    box-shadow: var(--shadow-2);
+    transition: transform .25s linear;
+    border: 1px solid var(--border-color) !important;
+}
+
+.main-contents .my-card:hover {
+    transform: translateY(5px);
+}
+
+/* dashboard-bottom */
+.dashboard-bottom .my-card {
+    border-left: 6px solid var(--primary-color) !important;
+}
+
+.main-contents .dashboard-bottom .my-card:nth-child(1) {
+    border-left: 6px solid blue !important;
+    color: blue;
+}
+
+.main-contents .dashboard-bottom .my-card:nth-child(2) {
+    border-left: 6px solid orange !important;
+    color: orange;
+}
+
+.main-contents .dashboard-bottom .my-card:nth-child(3) {
+    border-left: 6px solid purple !important;
+    color: purple
+}
+
+.main-contents .dashboard-bottom .my-card:nth-child(4) {
+    border-left: 6px solid orangered !important;
+    color: orangered
+}
+
+.main-contents .dashboard-bottom .data-number {
+    color: var(--text-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+======================================
+=====    Login Page Start Here   =====
+======================================
+*/
+
+.category .tab-button {
+    padding: 10px 12px;
+    background-color: var(--border-color2);
+}
+
+.category .tab-button.active,
+.category .tab-button:hover {
+    background-color: var(--gray);
+}
+
+
+/* search-btn */
+.input-and-button .search-btn {
+    outline: 4px solid #a5a4a461;
+}
+
+
+
+/* products */
+.product.my-card {
+    box-shadow: unset;
+    cursor: pointer;
+    /* border: none !important; */
+}
+
+.product.my-card:hover,
+.product.my-card.active {
+    background-color: var(--border-color2);
+    border-color: var(--white) !important;
+}
+
+.product img {
+    height: 120px;
+}
+
+.login-other {
+    height: 100dvh;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.login-other input {
+    border-color: var(--border-color);
+    border-width: 2px;
+}
+
+.login-other .my-card {
+    width: 680px;
+    min-height: 440px;
+    max-width: unset;
+    padding: 32px;
+    border: none;
+    box-shadow: var(--shadow-1);
+}
+
+
+
+
+
+
+/*
+======================================
+=====   Mobile Responsive  Here  =====
+======================================
+*/
+@media(max-width:991px) {
+    body {
+        min-width: 480px;
+    }
+
+    /*=====  header  =====*/
+    header {
+        padding: 8px 20px;
+    }
+
+    header .mobile-header {
+        display: block;
+    }
+
+    header .mobile-menu-btn {
+        color: var(--text-color);
+    }
+
+    header .logo {
+        width: 200px;
+        align-items: start;
+        justify-content: start;
+    }
+
+    header .page-name {
+        text-align: center;
+    }
+
+
+    /* mobile-header-bottom */
+    .mobile-header-bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: var(--sidebar-header-bg);
+        z-index: 4;
+        box-shadow: var(--shadow-2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--white);
+    }
+
+    /*=====  sidebar  =====*/
+    .sidebar {
+        left: -100%;
+        width: 300px;
+        transition: .3s linear;
+        z-index: 12;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /*=====  Main Contents  =====*/
+    .main-contents {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-contents .dashboard {
+        height: unset;
+    }
+
+
+
+    .product.my-card {
+        box-shadow: unset;
+        cursor: pointer;
+        /* border: none !important; */
+        grid-template-columns: 1fr;
+    }
+
+    .product.my-card img {
+        height: auto;
+    }
+
+    .product h5 {
+        margin: 8px 0;
+    }
+
+    /*======  Main Contains  ======*/
+    .main-contents {
+        padding: 16px;
+        padding-bottom: 90px;
+    }
+
+    .home-page.main-contents {
+        padding: 0;
+        padding-bottom: 90px;
+    }
+
+
+    /*======  New order Page  ======*/
+    .new-order {
+        width: 100%;
+    }
+
+    .new-order-area .products-area {
+        width: 100%;
+    }
+
+    /* search-head */
+    .search-head input {
+        width: 300px;
+    }
+
+    .total-bill-area {
+        width: 100%;
+    }
+
+
+    /*======  Order Page =====*/
+    .order-details-area {
+        grid-template-columns: 1fr;
+    }
+
+    .table .table-body li {
+        display: block;
+        border: 1px solid #ddd;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+}
