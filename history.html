@@ -29,7 +29,7 @@
 
                 <div class="my-flex-between my-w-100">
                     <!-- page name -->
-                    <h3 class="my-ml-5 page-name my-fw-medium ">Dashboard</h3>
+                    <h3 class="my-ml-5 page-name my-fw-medium ">History</h3>
 
                     <!-- header right -->
                     <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
@@ -160,7 +160,7 @@
                 <!--==============   Sidebar Main Menu Here  ================ -->
                 <ul class="sidebar-menu my-w-100 my-has-scrollbar-sm">
                     <li>
-                        <a class="sidebar-main-menu my-flex-between active " href="./index.html">
+                        <a class="sidebar-main-menu my-flex-between  " href="./index.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <img class="w-10" src="./static/images/dashboard.png" alt="">
                                 ড্যাশবোর্ড
@@ -176,7 +176,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  " href="./history.html">
+                        <a class="sidebar-main-menu my-flex-between active " href="./history.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <img class="w-10" src="./static/images/reports.png" alt="">
                                 হিস্ট্রি
@@ -219,69 +219,35 @@
         <!--=========================================-->
         <section>
             <div class="main-contents my-p-6 sale-page my-has-scrollbar-sm" id="main-contents">
-                <div class="dashbord">
-                    <div class="my-grid-4 cards my-grid-lg-3  my-grid-md-2 my-gap-5">
+                <div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Item Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Item Unit</th>
+                                    <th>Status</th>
+                                    <th>Other</th>
+                                </tr>
+                            </thead>
 
-                        <!-- Toal Purches -->
-                        <div class="my-card  my-d-flex my-gap-5">
-                            <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
-                            </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium ">Total Purches </h3>
-                                <div class="my-fs-lg">78990.00/-</div>
-                            </div>
-                        </div>
-
-                        <!-- Total Orders -->
-                        <div class="my-card  my-d-flex my-gap-5">
-                            <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
-                            </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium">Total Orders </h3>
-                                <div class="my-fs-lg">103</div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Amount -->
-                        <div class="my-card  my-d-flex my-gap-5">
-                            <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
-                            </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10 ">
-                                <h3 class="my-fw-medium">Pending Amount </h3>
-                                <div class="my-fs-lg">4055.00/-</div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Orders -->
-                        <div class="my-card  my-d-flex my-gap-5">
-                            <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
-                            </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium">Pending Orders </h3>
-                                <div class="my-fs-lg"> 12322.00/-</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="my-grid-2 graph my-grid-md-1 my-gap-5 my-mt-8">
-                        <div>
-                            <div class="my-fs-xl">Yearly Purches Grap</div>
-                            <div class="my-card my-mt-2">
-                                <canvas id="totalPurchasesChart"></canvas>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="my-fs-xl">Top Purches Products</div>
-                            <div class="my-card my-mt-2">
-                                <canvas id="productTypesChart"></canvas>
-                            </div>
-                        </div>
+                            <tbody>
+                                <tr>
+                                    <td>10 Jan 2025</td>
+                                    <td>item name here</td>
+                                    <td>12000/-</td>
+                                    <td>10</td>
+                                    <td>10kg</td>
+                                    <td>
+                                        <div class="status pending">Pending</div>
+                                    </td>
+                                    <td>others</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -320,47 +286,8 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="./static/js/main.js"></script>
         <script src="./static/js/index.js"></script>
-        <script>
-            // Total Purchases Over Time (Line Chart)
-            const totalPurchasesCtx = document.getElementById('totalPurchasesChart').getContext('2d');
-            new Chart(totalPurchasesCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'june', 'july'],
-                    datasets: [{
-                        label: 'Total Purchases',
-                        data: [1200, 1900, 3000, 2500, 3200, 0, 5690],
-                        borderColor: 'rgba(75, 192, 192)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        tension: 0.4
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-
-            // Product Types (Pie Chart)
-            const productTypesCtx = document.getElementById('productTypesChart').getContext('2d');
-            new Chart(productTypesCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['পাউরুটি', 'বিস্কুট', 'পেস্ট্রি', 'কুকি'],
-                    datasets: [{
-                        label: 'Product Types',
-                        data: [40, 25, 20, 15],
-                        backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0'],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-        </script>
 
     </body>
 

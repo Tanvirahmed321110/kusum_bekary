@@ -7,11 +7,9 @@
     /*______  Color  ______ */
     --primary-color: #9a5545;
     --primary-hover-color: #6d3c31;
-    --sidebar-header-bg: #09314e;
     --secondary-color: #081621;
     --orange: #9ab622;
     --green: #9a5545;
-    --gray: linear-gradient(105deg, #384455cc 60%, #586a85cc 100%);
     --gray: #767676;
     --gray2: #b0adad;
     --white: #fff;
@@ -19,6 +17,7 @@
     --border-color: #ededed;
     --border-color2: #c7c7c7;
     --red: #EE1B24;
+    --blue: rgb(59, 59, 244);
     --after: #1878F2;
     --before: #256fd1ca;
     --input: #1876f25b;
