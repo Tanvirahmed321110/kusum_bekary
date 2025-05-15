@@ -1556,7 +1556,7 @@ tr {
 
 /*___________||  Responsive Start Here  ||___________ */
 /*________  responsive for tablet divece  ________*/
-@media (max-width:1380px) {
+@media (max-width:1400px) {
     .my-flex-lg-column {
         flex-direction: column;
     }
