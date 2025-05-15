@@ -18,7 +18,7 @@
                 <div class="my-d-flex my-gap-10 my-flex-between left">
                     <!--=====  For Logo  =====-->
                     <div class="logo  ">
-                        <h2 class="">Kusum .</h1>
+                        <h2 class="">Kusum .</h2>
                     </div>
 
                     <!-- Sidebar Close Button -->
@@ -198,9 +198,11 @@
                                 Log Out</li>
                         </ul>
                         <div class="my-flex-center my-w-100">
-                            <a href="https://www.xsellencebdltd.com/"
-                                class="my-fs-sm my-p-1 my-text-red my-d-flex my-align-center my-gap-1">
-                                <span>⚡</span>
+                            <a target="_blank" href="https://www.xsellencebdltd.com/"
+                                class="my-fs-xs my-p-1 my-text-red my-d-flex my-align-center my-gap-1">
+                                <img class="w-12"
+                                    src="https://www.xsellencebdltd.com/web/image/website/1/logo/Xsellence%20Bangladesh%20Limited?unique=75d998e"
+                                    alt="">
                                 power
                                 by
                                 xsellece</a>
@@ -225,44 +227,44 @@
                         <!-- Toal Purches -->
                         <div class="my-card  my-d-flex my-gap-5">
                             <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
+                                <div class="my-icon-md my-bg-border my-text-green my-fs-md">i</div>
                             </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium ">Total Purches </h3>
-                                <div class="my-fs-lg">78990.00/-</div>
+                            <div class="my-flex-column my-justify-between my-align-end my-w-100 my-gap-10">
+                                <div class="my-fs-md ">Total Purches </div>
+                                <div class="my-fs-xl my-fw-medium">78990.00<span>৳</span></div>
                             </div>
                         </div>
 
                         <!-- Total Orders -->
                         <div class="my-card  my-d-flex my-gap-5">
                             <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
+                                <div class="my-icon-md my-bg-border my-text-green my-fs-md">i</div>
                             </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium">Total Orders </h3>
-                                <div class="my-fs-lg">103</div>
+                            <div class="my-flex-column my-justify-between my-align-end my-w-100 my-gap-10">
+                                <div class="my-fs-md ">Total Orders </div>
+                                <div class="my-fs-xl my-fw-medium">102</div>
                             </div>
                         </div>
 
                         <!-- Pending Amount -->
                         <div class="my-card  my-d-flex my-gap-5">
                             <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
+                                <div class="my-icon-md my-bg-border my-text-green my-fs-md">i</div>
                             </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10 ">
-                                <h3 class="my-fw-medium">Pending Amount </h3>
-                                <div class="my-fs-lg">4055.00/-</div>
+                            <div class="my-flex-column my-justify-between my-align-end my-w-100 my-gap-10">
+                                <div class="my-fs-md ">Pending Amount</div>
+                                <div class="my-fs-xl my-fw-medium">6090.00<span>৳</span></div>
                             </div>
                         </div>
 
                         <!-- Pending Orders -->
                         <div class="my-card  my-d-flex my-gap-5">
                             <div>
-                                <div class="my-icon-md my-bg-primary my-text-white">i</div>
+                                <div class="my-icon-md my-bg-border my-text-green my-fs-md">i</div>
                             </div>
-                            <div class="my-flex-column my-align-end my-w-100 my-gap-10">
-                                <h3 class="my-fw-medium">Pending Orders </h3>
-                                <div class="my-fs-lg"> 12322.00/-</div>
+                            <div class="my-flex-column my-justify-between my-align-end my-w-100 my-gap-10">
+                                <div class="my-fs-md ">Pending Orders</div>
+                                <div class="my-fs-xl my-fw-medium">12</div>
                             </div>
                         </div>
 
@@ -329,10 +331,10 @@
             new Chart(totalPurchasesCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'june', 'july'],
+                    labels: ['1-5', '6-10', '11-15', '16-20', '21-25', '26-30'],
                     datasets: [{
                         label: 'Total Purchases',
-                        data: [1200, 1900, 3000, 2500, 3200, 0, 5690],
+                        data: [1200, 1900, 3000, 2500, 3200, 1200],
                         borderColor: 'rgba(75, 192, 192)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
                         tension: 0.4
