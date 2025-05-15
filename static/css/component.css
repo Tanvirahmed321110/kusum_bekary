@@ -2593,7 +2593,7 @@ input[type="radio"]:checked::after {
     color: var(--white-off);
 }
 
-.status.out-stock {
+.status.cencel {
     background-color: var(--red);
     color: var(--white-off);
 }

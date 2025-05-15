@@ -455,6 +455,66 @@ img {
 
 
 
+
+.table-area {
+    background-color: var(--white);
+    border-radius: 4px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-area table {
+    width: 100%;
+    min-width: 800px;
+    /* Optional: prevents table from shrinking too much */
+    border-collapse: collapse;
+
+}
+
+
+
+.table-area table th,
+.table-area table td {
+    /* min-width: 86px; */
+    text-align: left;
+    padding: 14px 20px;
+    white-space: nowrap;
+}
+
+.table-area table thead tr {
+    border-bottom: 2px solid var(--border-color2);
+}
+
+.table-area table th {
+    /* border-bottom: 1px solid red; */
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.table-area table td {
+    color: var(--gray);
+}
+
+
+.table-area table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-area table tbody tr:nth-child(odd) {
+    background-color: rgba(241, 199, 199, 0.215)
+}
+
+
+
+
+
+
+
 @media(max-width:1400px) {
     .product.my-card {
         box-shadow: unset;
